@@ -2,7 +2,7 @@
     <section>
     <div class="container icons_section">
         <div class="icon_item" v-for="(item, index) in slots" :key="index">
-            <img :src="item.img" :alt="item.text">
+            <img :src="getImagePath(`../assets/${item.img}`)" :alt="item.text">
             <a :href="item.url">{{item.text}}</a>
         </div>
     </div>
@@ -40,7 +40,11 @@
                     img: '../assets/img/buy-dc-power-visa.svg'
                 },
             ],
-
+            }
+        },
+        methods: {
+            getImagePath: function(imgPath) {
+                return new URL(imgPath, import.meta.url).href;
             }
         },
     }
