@@ -5,6 +5,7 @@
             <ul>
                 <li v-for="(item,index) in links" :key="index">
                  <a :href="item.url" :class="{'active' : item.current}">{{item.text}}</a>
+                 <div class="underliner" :class="{'active' : item.current}"></div>
                 </li>
             </ul>
         </nav>
@@ -86,6 +87,10 @@ header{
         @include dflex;
         list-style: none;
 
+        li {
+            position: relative;
+        }
+
         li a {
             display: block;
             text-decoration: none;
@@ -94,7 +99,28 @@ header{
             padding: 1rem;
             font-weight: bold;
             color: $black;
+            transition: all 0.3s ease;
+            &:hover:not(.active) {
+                color: gray;
+            }
         }
     }
 }
+.underliner {
+    background-color: $blue;
+    height: 5px;
+    width: 60%;
+    position: absolute;
+    left: 20%;
+    bottom: - 1.8rem;
+    opacity: 0;
+
+    &.active {
+        opacity: 1;
+    }
+}
+.active {
+    color: $blue;
+}
+
 </style>

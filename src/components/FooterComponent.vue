@@ -2,9 +2,7 @@
    <footer>
     <div class="container">
         <div class="foot_left">
-            <button>
-                <a href="#">Sign-up now!</a>
-            </button>
+            <button>Sign-up now!</button>
         </div>
         <div class="foot_right">
             <span>
@@ -36,24 +34,29 @@ footer {
     .container {
         @include dflex;
         height: 120px;
-        & button {
+        button {
             border: 2px solid $blue;
             padding: .8rem 1.2rem;
             background-color: $darkgray;
             font-size: 1rem;
             font-weight: 600;
             text-transform: uppercase;
-            
-            & a {
-                text-decoration: none;
-                color: white;
+            color: white;
+            cursor: pointer;
+            transition: all 0.3s ease;
+
+            &:hover {
+                background-color: $blue;
             }
         }
         & .foot_right {
             @include dflex;
             gap: 1rem;
 
-            & span a {
+            img {
+                transition: all 0.5s ease;
+            }
+            span a {
                 color: $blue;
                 display: block;
                 text-decoration: none;
@@ -61,6 +64,15 @@ footer {
                 font-size: 1.2rem;
                 font-weight: 600;
                 margin-right: 1.2rem;
+                transition: color 0.3s linear;
+
+                &:hover {
+                    color: white;
+                }
+            }
+            img:hover {
+                transform: translateY(- 0.5rem);
+                cursor: pointer;
             }
         }
     }

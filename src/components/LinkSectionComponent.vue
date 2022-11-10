@@ -5,93 +5,30 @@
             <div>
                 <h4>Dc Comics</h4>
                 <ul>
-                    <li>
-                        <a href="#">Characters</a>
-                    </li>
-                    <li>
-                        <a href="#">Comics</a>
-                    </li>
-                    <li>
-                        <a href="#">Movies</a>
-                    </li>
-                    <li>
-                        <a href="#">TV</a>
-                    </li>
-                    <li>
-                        <a href="#">Games</a>
-                    </li>
-                    <li>
-                        <a href="#">Videos</a>
-                    </li>
-                    <li>
-                        <a href="#">New</a>
+                    <li v-for="(item, index) in comics" :key="index">
+                        <a :href="item.url">{{item.linkText}}</a>
                     </li>
                 </ul>
-                <h4>Dc Comics</h4>
+                <h4>Shop</h4>
                 <ul>
-                    <li>
-                        <a href="#">Shop DC</a>
-                    </li>
-                    <li>
-                        <a href="#">Shop DC Collectables</a>
+                    <li v-for="(item,index) in shop" :key="index">
+                        <a :href="item.url">{{item.linkText}}</a>
                     </li>
                 </ul>
             </div>
             <div>
                 <h4>Dc</h4>
                 <ul>
-                    <li>
-                        <a href="#">Terms Of Use</a>
-                    </li>
-                    <li>
-                        <a href="#">Privacy policy</a>
-                    </li>
-                    <li>
-                        <a href="#">Ad Choices</a>
-                    </li>
-                    <li>
-                        <a href="#">Advertising</a>
-                    </li>
-                    <li>
-                        <a href="#">Jobs</a>
-                    </li>
-                    <li>
-                        <a href="#">Subscriptions</a>
-                    </li>
-                    <li>
-                        <a href="#">Talent Workshops</a>
-                    </li>
-                    <li>
-                        <a href="#">CPSC Certificates</a>
-                    </li>
-                    <li>
-                        <a href="#">Rating</a>
-                    </li>
-                    <li>
-                        <a href="#">Shop Help</a>
-                    </li>
-                    <li>
-                        <a href="#">Cntact Us</a>
+                    <li v-for="(item, index) in dc" :key="index">
+                        <a :href="item.url">{{item.linkText}}</a>
                     </li>
                 </ul>
             </div>
             <div>
                 <h4>Sites</h4>
                 <ul>
-                    <li>
-                        <a href="#">DC</a>
-                    </li>
-                    <li>
-                        <a href="#">MAD Magazine</a>
-                    </li>
-                    <li>
-                        <a href="#">DC Kids</a>
-                    </li>
-                    <li>
-                        <a href="#">DC Universe</a>
-                    </li>
-                    <li>
-                        <a href="#">DC Power Visa</a>
+                    <li v-for="(item, index) in sites" :key="index">
+                        <a :href="item.url">{{item.linkText}}</a>
                     </li>
                 </ul>
             </div>
@@ -104,6 +41,116 @@
 <script>
     export default {
         name: 'LinkSectionComponent',
+        data() {
+            return {
+                comics: [{
+                    linkText: 'Characters',
+                    url: '#' 
+                },
+                {
+                    linkText: 'Comics',
+                    url: '#' 
+                },
+                {
+                    linkText: 'Movies',
+                    url: '#' 
+                },
+                {
+                    linkText: 'TV',
+                    url: '#' 
+                },
+                {
+                    linkText: 'Games',
+                    url: '#' 
+                },
+                {
+                    linkText: 'Videos',
+                    url: '#' 
+                },
+                {
+                    linkText: 'News',
+                    url: '#' 
+                }],
+                shop: [
+                    {
+                    linkText: 'Shop DC',
+                    url: '#' 
+                },
+                {
+                    linkText: 'Shop DC Collectables',
+                    url: '#' 
+                },
+                ],
+                dc: [
+                    {
+                    linkText: 'Terms Of Use',
+                    url: '#' 
+                },
+                {
+                    linkText: 'Privacy Policy',
+                    url: '#' 
+                },
+                {
+                    linkText: 'Ad Choices',
+                    url: '#' 
+                },
+                {
+                    linkText: 'Advertising',
+                    url: '#' 
+                },
+                {
+                    linkText: 'Jobs',
+                    url: '#' 
+                },
+                {
+                    linkText: 'Subscriptions',
+                    url: '#' 
+                },
+                {
+                    linkText: 'Talent Workshops',
+                    url: '#' 
+                },
+                {
+                    linkText: 'CPSC Certificates',
+                    url: '#' 
+                },
+                {
+                    linkText: 'Ratings',
+                    url: '#' 
+                },
+                {
+                    linkText: 'Shop Help',
+                    url: '#' 
+                },
+                {
+                    linkText: 'Contact Us',
+                    url: '#' 
+                }
+                ],
+                sites: [
+                    {
+                    linkText: 'DC',
+                    url: '#' 
+                },
+                {
+                    linkText: 'MAD Magazine',
+                    url: '#' 
+                },
+                {
+                    linkText: 'DC Kids',
+                    url: '#' 
+                },
+                {
+                    linkText: 'DC Universe',
+                    url: '#' 
+                },
+                {
+                    linkText: 'DC Power Visa',
+                    url: '#' 
+                },
+                ],
+            }
+        },
     }
 </script>
 
@@ -141,9 +188,13 @@ section {
                 padding:0.3rem 0;
                 font-size: 0.8rem;
                 
-                & a {
+                a {
                     text-decoration: none;
                     color: gray;
+
+                    &:hover {
+                        text-decoration: underline;
+                    }
                 }
             }
         }

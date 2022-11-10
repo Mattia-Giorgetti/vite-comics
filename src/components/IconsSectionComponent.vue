@@ -65,16 +65,20 @@ section {
         .icon_item {
             @include dflex;
             
-            & img {
+            img {
                 width: 40px;
             }
-            & a {
+            a {
                 text-decoration: none;
                 font-size: .7rem;
                 text-transform: uppercase;
                 font-weight: 600;
                 color: white;
                 padding: 0 1rem ;
+
+                &:hover {
+                    text-decoration: underline;
+                }
             }
         }
     }
