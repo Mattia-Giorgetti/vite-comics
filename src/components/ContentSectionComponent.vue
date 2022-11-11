@@ -28,7 +28,7 @@
 @use '../assets/styles/partials/variables' as *;
 
 section {
-    background-color: black;
+    background-color:$black;
     button {
         display: block;
         margin: 2rem auto;
