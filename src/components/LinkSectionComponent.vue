@@ -165,8 +165,11 @@ section {
     overflow: hidden;
 
     .container {
-        height: 420px;
+        height: 380px;
         @include dflex;
+        img {
+            margin-top: -8rem;
+        }
         .links-list {
             display: flex;
             justify-content: space-between;
