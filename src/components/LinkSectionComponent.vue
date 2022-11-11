@@ -167,7 +167,6 @@ section {
     .container {
         height: 420px;
         @include dflex;
-
         .links-list {
             display: flex;
             justify-content: space-between;
