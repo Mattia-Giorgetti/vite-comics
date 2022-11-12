@@ -56,10 +56,29 @@ section {
         padding-top: 1.5rem;
 
         .mycol {
-            flex-basis: calc(100% / 6);
+            width: calc(100% / 6);
             padding: 1rem;
         }
     }
+
+ @media screen and (max-width: 768px){
+    .myrow {
+        .mycol{
+            width: calc(100% / 4);
+        }
+    }
 }
+@media screen and (max-width: 592px){
+    .myrow {
+        .mycol{
+            width: calc(100% / 2);
+        }
+    }
+}
+
+
+    
+}
+
 
 </style>

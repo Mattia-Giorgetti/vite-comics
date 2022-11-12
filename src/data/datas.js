@@ -71,6 +71,59 @@ const comics = [
       series: "Catwoman",
       type: "graphic novel"
     }
+  ];
+
+  const NavBarlinks =  [
+    {
+      text: "Characters",
+      url: "#",
+      current: false,
+    },
+    {
+      text: "Comics",
+      url: "#",
+      current: true,
+    },
+    {
+      text: "Movies",
+      url: "#",
+      current: false,
+    },
+    {
+      text: "TV",
+      url: "#",
+      current: false,
+    },
+    {
+      text: "Games",
+      url: "#",
+      current: false,
+    },
+    {
+      text: "Collectables",
+      url: "#",
+      current: false,
+    },
+    {
+      text: "Videos",
+      url: "#",
+      current: false,
+    },
+    {
+      text: "Fans",
+      url: "#",
+      current: false,
+    },
+    {
+      text: "News",
+      url: "#",
+      current: false,
+    },
+    {
+      text: "Shop",
+      url: "#",
+      current: false,
+    },
   ]
 
-  export {comics};
+  export {comics, NavBarlinks};

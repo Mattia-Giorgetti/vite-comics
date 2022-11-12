@@ -1,6 +1,18 @@
 @mixin dflex {
     display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+@mixin dflex-wrap {
+    display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
     align-items: center;
+}
+@mixin dflex-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
 }
