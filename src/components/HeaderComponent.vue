@@ -9,7 +9,7 @@
         </li>
       </ul>
     </nav>
-    <span @click="this.dropDown = !this.dropDown">Menu</span>
+    <span @click="this.dropDown = !this.dropDown"><i class="fa-solid fa-bars"></i></span>
     <Transition name="slide-fade">
       <div class="dropdown_menu" v-if="dropDown">
         <DropDownComponent v-for="(item, index) in links" :key="index" :obj="item" />
@@ -114,6 +114,7 @@ header {
 
     span {
       display: block;
+      font-size: 2.5rem;
     }
   }
   .slide-fade-enter-active {
